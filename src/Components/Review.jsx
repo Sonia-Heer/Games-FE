@@ -5,12 +5,9 @@ const Review = ({ review }) => {
 
     return (
         <div className="review-container" key={review_id}>
-            <h3 className="review-title">Title: {title}</h3>
+            <h3 className="review-title">{title}</h3>
             <img src={review_img_url}/>
-            <p>Category: {category}</p>
-            <p>Designer: {designer}</p>
-            <p>Owner: {owner}</p>
-            <p>Votes: {votes}</p>
+            <p className="review-category">{category}</p>
             <p className="review-body">{review_body}</p>
             
             
@@ -19,3 +16,8 @@ const Review = ({ review }) => {
 }
 
 export default Review
+
+
+{/* <p>Designer: {designer}</p>
+            <p>Owner: {owner}</p>
+            <p>Votes: {votes}</p> */}

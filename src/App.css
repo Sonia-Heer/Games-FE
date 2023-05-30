@@ -36,17 +36,30 @@ img {
   justify-content: space-between;
 }
 
+.review-category {
+  color: #d5a90c;
+}
+
+.review-body {
+  min-height: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+
 .review-container {
   flex-basis: calc(33.33% - 0.67rem);
   min-width: 200px;
   min-height: 200px;
   border: 1px solid purple;
+  
 }
 
 .review-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   text-align: center;
+  word-wrap: break-word;
 }
+  
 
