@@ -1,3 +1,20 @@
+.Header {
+  padding: 10px; 
+  border: 1px solid #3e0cd5; 
+  margin-bottom: 20px;
+}
+
+.Nav {
+  padding: 10px; 
+  border: 1px solid #700cd5; 
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 50px;
+
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +22,44 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+img {
+  max-height: 20rem;
+  max-width: 20rem;
+  padding: 10%;
+  margin: 10px;
+  object-fit: contain;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Review-Grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.review-category {
+  color: #d5a90c;
 }
 
-.card {
-  padding: 2em;
+.review-body {
+  min-height: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
 }
 
-.read-the-docs {
-  color: #888;
+.review-container {
+  flex-basis: calc(33.33% - 0.67rem);
+  min-width: 200px;
+  min-height: 200px;
+  border: 1px solid purple;
+  
 }
+
+.review-title {
+  text-align: center;
+  word-wrap: break-word;
+}
+  
+
