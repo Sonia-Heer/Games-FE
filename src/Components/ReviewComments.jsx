@@ -5,17 +5,22 @@ import formatDate from "../Functions/FormatDate";
 
 const ReviewComments = ({ reviewId }) => {
     const [comments, setComments] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
+    useEffect(() => { 
       getReviewIdComments(reviewId)
         .then((data) => {
           setComments(data);
+          setIsLoading(false)
         })
         .catch((error) => {
           console.error(error);
         });
     }, [reviewId]);
 
+    if(isLoading){
+      return <p>Loading comments...</p>
+    }
     
     return (
         <div>

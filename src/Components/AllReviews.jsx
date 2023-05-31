@@ -5,17 +5,23 @@ import ReviewGrid from "./ReviewGrid";
 
 const AllReviews = () => {
     const [reviews, setReviews] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         getReviews()
         .then((res) => {
             setReviews(res)
+            setIsLoading(false)
         })            
         .catch((err) => {
             console.error(err);
         });
     }, [])
 
+    if(isLoading){
+        return <p>Loading reviews...</p>
+      }
+      
     return (
     <div>
       <h2>Reviews</h2>
