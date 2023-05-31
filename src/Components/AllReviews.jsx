@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import getReviews from "../apis"
+import React, { useContext, useEffect, useState } from "react";
+import { getReviews } from "../apis"
 import Review from "./Review";
 import ReviewGrid from "./ReviewGrid";
+import { ReviewsContext } from "../Context/ReviewsContext";
 
 const AllReviews = () => {
-    const [reviews, setReviews] = useState([])
-    console.log(reviews)
+    const {reviews, setReviews} = useContext(ReviewsContext)
+
     useEffect(() => {
         getReviews()
         .then((res) => {
