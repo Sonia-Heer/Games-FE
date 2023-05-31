@@ -62,4 +62,10 @@ img {
   word-wrap: break-word;
 }
   
+.Comment {
+  border: 1px solid cadetblue;
+  padding: 10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
 

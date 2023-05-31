@@ -16,3 +16,10 @@ export function getReviewById(review_id){
     })
 }
 
+export function getReviewIdComments(review_id){
+  return gamesApi.get(`/reviews/${review_id}/comments`)
+    .then((response) => {
+      return response.data.comments;
+    })
+}
+

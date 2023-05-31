@@ -21,8 +21,7 @@ const AllReviews = () => {
     if(isLoading){
         return <p>Loading Reviews...</p>
     }
-
-    
+  
     return (
     <div>
       <h2>Reviews</h2>

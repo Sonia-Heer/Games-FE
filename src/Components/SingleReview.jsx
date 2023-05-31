@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getReviewById } from "../apis";
+import ReviewComments from "./ReviewComments";
+import formatDate from "../Functions/FormatDate";
 
 const SingleReview = () => {
   const { review_id } = useParams();
@@ -18,7 +20,6 @@ const SingleReview = () => {
       });
   }, [review_id]);
 
-
   if(isLoading){
     return <p>Loading Review...</p>
 }
@@ -29,11 +30,11 @@ const SingleReview = () => {
           <img src={review.review_img_url} alt={review.title} />
           <p>{review.category}</p>
           <p>Designer: {review.designer}</p>
-          <p>Created: {review.created_at}</p>
+          <p>Created: {formatDate(review.created_at)}</p>
           <p>{review.review_body}</p>
           <p>{review.owner}</p>
           <p>Votes: {review.votes}</p>
-          
+         <ReviewComments reviewId={review_id} />
     </div>
   );
 };
