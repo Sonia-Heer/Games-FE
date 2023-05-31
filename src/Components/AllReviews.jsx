@@ -19,9 +19,9 @@ const AllReviews = () => {
     }, [])
 
     if(isLoading){
-        return <p>Loading reviews...</p>
-      }
-      
+        return <p>Loading Reviews...</p>
+    }
+  
     return (
     <div>
       <h2>Reviews</h2>

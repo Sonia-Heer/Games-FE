@@ -6,9 +6,7 @@ import Nav from "./Components/Nav";
 import AllReviews from './Components/AllReviews';
 import SingleReview from './Components/SingleReview';
 
-
 function App(){
-
   return (
     <div>
       <Header/>
