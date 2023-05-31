@@ -12,7 +12,6 @@ export function getReviews(){
 export function getReviewById(review_id){
   return gamesApi.get(`/reviews/${review_id}`)
     .then((response) => {
-      console.log(response.data.review)
       return response.data.review;
     })
 }

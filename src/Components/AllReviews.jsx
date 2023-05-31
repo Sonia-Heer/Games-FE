@@ -2,21 +2,27 @@ import React, { useContext, useEffect, useState } from "react";
 import { getReviews } from "../apis"
 import Review from "./Review";
 import ReviewGrid from "./ReviewGrid";
-import { ReviewsContext } from "../Context/ReviewsContext";
 
 const AllReviews = () => {
-    const {reviews, setReviews} = useContext(ReviewsContext)
+    const [reviews, setReviews] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         getReviews()
         .then((res) => {
             setReviews(res)
+            setIsLoading(false)
         })            
         .catch((err) => {
             console.error(err);
         });
     }, [])
 
+    if(isLoading){
+        return <p>Loading Reviews...</p>
+    }
+
+    
     return (
     <div>
       <h2>Reviews</h2>
