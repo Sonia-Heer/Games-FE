@@ -54,7 +54,7 @@ img {
   min-width: 200px;
   min-height: 200px;
   border: 1px solid purple;
-  
+  margin-bottom: 10px;
 }
 
 .review-title {
