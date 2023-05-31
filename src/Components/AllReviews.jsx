@@ -2,10 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { getReviews } from "../apis"
 import Review from "./Review";
 import ReviewGrid from "./ReviewGrid";
-import { ReviewsContext } from "../Context/ReviewsContext";
 
 const AllReviews = () => {
-    const {reviews, setReviews} = useContext(ReviewsContext)
+    const [reviews, setReviews] = useState([])
 
     useEffect(() => {
         getReviews()
