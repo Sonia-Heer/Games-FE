@@ -35,7 +35,7 @@ const SingleReview = () => {
           <p>{review.review_body}</p>
           <p>{review.owner}</p>
           <IncVotes review={review} setReview={setReview} />
-         <ReviewComments reviewId={review_id} />
+         <ReviewComments review_id={review_id} />
          
     </div>
   );

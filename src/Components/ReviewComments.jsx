@@ -2,13 +2,14 @@ import React from "react";
 import { getReviewIdComments } from "../apis";
 import { useState, useEffect } from "react";
 import formatDate from "../Functions/FormatDate";
+import AddComment from "./AddComment";
 
-const ReviewComments = ({ reviewId }) => {
+const ReviewComments = ({ review_id }) => {
     const [comments, setComments] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => { 
-      getReviewIdComments(reviewId)
+      getReviewIdComments(review_id)
         .then((data) => {
           setComments(data);
           setIsLoading(false)
@@ -16,7 +17,7 @@ const ReviewComments = ({ reviewId }) => {
         .catch((error) => {
           console.error(error);
         });
-    }, [reviewId]);
+    }, [review_id]);
 
     if(isLoading){
       return <p>Loading comments...</p>
@@ -34,7 +35,8 @@ const ReviewComments = ({ reviewId }) => {
                         <p>{formatDate(comment.created_at)}</p> 
                         </li>
                     })
-                ) : (<p>No comments...</p>)}            
+                ) : (<p>No comments...</p>)}   
+            <AddComment review_id={review_id} setComments={setComments} />         
         </div>
     )
 
