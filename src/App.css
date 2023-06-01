@@ -69,3 +69,16 @@ img {
   list-style-type: none;
 }
 
+.vote-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid blue;
+  padding: 10px;
+  max-width: 10rem;
+}
+
+.vote-count {
+  margin-bottom: 5px;
+}
+
