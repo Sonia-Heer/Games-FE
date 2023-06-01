@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getReviewById } from "../apis";
 import ReviewComments from "./ReviewComments";
 import formatDate from "../Functions/FormatDate";
+import IncVotes from "./IncVotes";
 
 const SingleReview = () => {
   const { review_id } = useParams();
@@ -10,6 +11,8 @@ const SingleReview = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
+    
     getReviewById(review_id)
       .then((data) => {
         setReview(data);
@@ -33,8 +36,9 @@ const SingleReview = () => {
           <p>Created: {formatDate(review.created_at)}</p>
           <p>{review.review_body}</p>
           <p>{review.owner}</p>
-          <p>Votes: {review.votes}</p>
+          <IncVotes review={review} setReview={setReview} />
          <ReviewComments reviewId={review_id} />
+         
     </div>
   );
 };

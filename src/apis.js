@@ -23,3 +23,12 @@ export function getReviewIdComments(review_id){
     })
 }
 
+export function patchReviewVotes(review_id, inc_votes){
+  const patchBody = {
+    inc_votes: inc_votes,
+  };
+  return gamesApi.patch(`/reviews/${review_id}`, patchBody)
+    .then((response) => {
+      return response.data
+    })
+}
