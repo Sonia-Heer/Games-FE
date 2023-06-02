@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Nav from "./Components/Nav";
 import AllReviews from './Components/AllReviews';
 import SingleReview from './Components/SingleReview';
+import Categories from './Components/Categories';
 
 function App(){
   return (
@@ -13,6 +14,7 @@ function App(){
         <Routes>
           <Route path='/reviews' element={<AllReviews/>}/>
           <Route path='/reviews/:review_id' element={<SingleReview/>}/>
+          <Route path='/categories' element={<Categories />}/>
         </Routes>
     </div>
 
