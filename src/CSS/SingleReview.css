@@ -1,0 +1,18 @@
+.single-review-container{
+    padding-top: 6rem;
+    color: aliceblue;
+    
+}
+
+.sr-title{
+    font-size: x-large;
+    font-weight: 700;
+}
+.single-review-content{
+    
+}
+
+.sr-owner{
+    text-align: left;
+}
+

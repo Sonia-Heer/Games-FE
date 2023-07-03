@@ -34,7 +34,6 @@ export function patchReviewVotes(review_id, inc_votes){
 }
 
 export function postComment(review_id, author, body){
-  console.log(author, body)
   const commentData = {
     author: author,
     body: body

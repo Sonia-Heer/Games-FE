@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { postComment } from '../apis';
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 const AddComment = ({ review_id, setComments }) => {
   const [author, setAuthor] = useState('');
@@ -54,9 +55,14 @@ const AddComment = ({ review_id, setComments }) => {
             required
           ></textarea>
         </div>
-        <button type="submit" disabled={isSubmitting}>
+        <Button
+            loadingText='Submitting...'
+            colorScheme='cyan'
+            variant='solid'
+            type="submit" 
+            disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Add Comment'}
-        </button>
+        </Button>
       </form>
     </div>
   );
