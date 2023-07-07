@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { patchReviewVotes } from "../apis";
-
+import '../CSS/SingleReview.css';
+import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 
 const IncVotes = ({ review, setReview }) => {
     const [error, setError] = useState(null);
@@ -37,14 +39,26 @@ const IncVotes = ({ review, setReview }) => {
       };
 
     return (
-        <div className="vote-button">
-            <p className="vote-count">Votes: {review.votes}</p>
-            <button onClick={handleIncrement}>
-                <span aria-label="increment votes for this review">⬆</span>
-            </button>
-            <button onClick={handleDecrement}>
-                <span aria-label="decrement votes for this review">⬇</span>
-            </button>
+        <div className="author-and-votes-container">
+          <div className="votes-container">
+          <button 
+              aria-label="increment votes for this review" onClick={handleIncrement}
+              className="vote-button vote-up"
+          >
+            <ThumbUpOffAltIcon className="thumbs" />
+          </button>
+          <button 
+              aria-label="decrement votes for this review" onClick={handleDecrement}
+              className="vote-button"
+          >
+            <ThumbDownOffAltIcon className="thumbs" />
+          </button>
+            <div className="vote-number-container">
+              <h3 aria-label="Vote score" className="votes">
+                {review.votes}
+              </h3>
+            </div>
+          </div>
             <p>{error}</p>
         </div>   
     )

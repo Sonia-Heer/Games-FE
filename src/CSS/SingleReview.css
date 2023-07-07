@@ -1,0 +1,214 @@
+.single-review-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 4rem;
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.hdqwalls.com/wallpapers/minimal-landscape-4k-ro.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.sr-title{
+    font-size: x-large;
+    font-weight: 700;
+    color:  #4a2358;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.sr-owner{
+    text-align: left;
+    font-weight: 700;
+    color: #FFBE7E ;
+    background-color: #4a2358;
+    border-radius:  10px 10px ;
+    padding: .3rem;
+
+}
+
+.Loading-page{
+    color: aliceblue;
+}
+
+.author-and-votes-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+
+}
+
+.votes-container{
+    display: flex;
+    gap: .1em;
+}
+
+.vote-number-container{
+    background-color: #4a2358;
+    padding: .2em .8em;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+
+.vote-button{
+    border: none;
+    background-color: #FFBE7E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2em .4em;
+}
+
+.vote-count{
+    color: rgb(240, 232, 232);
+    padding: 2rem;
+    
+}
+
+.vote-up{
+    border-radius: 10px 0 0 10px;
+}
+
+.votes{
+    color: #FFBE7E;
+}
+
+.thumbs{
+    color: #4a2358;
+}
+
+.image{
+    margin: 1em 0 0;
+    max-width: 100%;
+    border: 2px solid #4a2358;
+    border-radius: 10px;
+}
+
+.single-review-content{
+    border-radius: 10px;
+    background-color: #946d8c;
+    color: #4a2358;
+    margin: 1rem;
+}
+
+.body{
+    padding: .5rem;
+}
+
+.image-and-review-container{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    padding-left: 1rem;
+    background-color: #946d8c;
+    border-radius: 10px;
+    border: 3px solid #4a2358;
+    margin-bottom: 1rem;
+}
+
+.info{
+    padding: 1rem;
+}
+
+
+.comment-title{
+    font-size: large;
+    font-weight: 700;
+    color:  #FFBE7E;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.addcomment-container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #230e33;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+.comment-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1em;
+    border: 3px solid #FFBE7E;
+    border-radius: 10px;
+    color:#4a2358;
+    background-color: #FFBE7E;
+    gap: .4em
+}
+
+
+.comment-author{
+    font-family: "new-spirit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    font-size:medium;
+}
+
+.comment-body{
+    font-size: medium;
+}
+
+.comment-button{
+    padding: .5em 1em;
+   
+    border: 1px solid;
+    border-radius: 10px;
+    font-weight: 700;
+    max-width: 50%;
+    background-color:#FFBE7E;
+    color: #946d8c;
+}
+
+textarea{
+    font-family: "hoss-round-wide", sans-serif;
+    min-width: 80%;
+    padding: .2em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.comment-date-likes{
+    text-align: right;
+    font-size: small;
+}
+
+.textarea{
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    background-color: #946d8c;
+    
+}
+
+.textarea::placeholder{
+    color: #4a2358;
+    text-align: center;
+}
