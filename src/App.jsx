@@ -1,21 +1,31 @@
-import './App.css';
+// import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
-import Nav from "./Components/Nav";
 import AllReviews from './Components/AllReviews';
 import SingleReview from './Components/SingleReview';
+import * as React from 'react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: 'your-desired-background-color',
+      },
+    },
+  },
+});
 
 function App(){
   return (
-    <div>
+    <ChakraProvider theme={theme}>
       <Header/>
-      <Nav/>
         <Routes>
           <Route path='/reviews' element={<AllReviews/>}/>
           <Route path='/reviews/:review_id' element={<SingleReview/>}/>
         </Routes>
-    </div>
-
+    </ChakraProvider>
   )
 }
 
