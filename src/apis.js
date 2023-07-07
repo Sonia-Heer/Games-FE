@@ -33,6 +33,14 @@ export function patchReviewVotes(review_id, inc_votes){
     })
 }
 
+
+export function getCategories(){
+  return gamesApi.get('/categories')
+    .then((response) => {
+      return response.data;
+    })
+}
+
 export function postComment(review_id, author, body){
   const commentData = {
     author: author,
@@ -44,4 +52,5 @@ export function postComment(review_id, author, body){
       return response.data.newComment
     })
 }
+
 

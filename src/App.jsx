@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import AllReviews from './Components/AllReviews';
 import SingleReview from './Components/SingleReview';
+import Categories from './Components/Categories';
+
 import * as React from 'react'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
@@ -17,6 +19,7 @@ const theme = extendTheme({
   },
 });
 
+
 function App(){
   return (
     <ChakraProvider theme={theme}>
@@ -24,6 +27,7 @@ function App(){
         <Routes>
           <Route path='/reviews' element={<AllReviews/>}/>
           <Route path='/reviews/:review_id' element={<SingleReview/>}/>
+          <Route path='/categories' element={<Categories />}/>
         </Routes>
     </ChakraProvider>
   )

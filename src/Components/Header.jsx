@@ -1,6 +1,8 @@
 import React from "react";
+import Categories from "./Categories";
 import { Link } from "react-router-dom";
 import "../CSS/Header.css"
+
 
 const Header = () => {
   return (
