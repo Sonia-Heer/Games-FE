@@ -25,18 +25,19 @@ const ReviewComments = ({ review_id }) => {
     
     return (
         <div>
-            <h3>Comments</h3>
+            
+            <AddComment review_id={review_id} setComments={setComments} /> 
                 {comments.length > 0 ? (
                     comments.map((comment, index) => {
-                    return <li className="Comment" key={index}>
-                        <p>{comment.author}</p> 
-                        <p>{comment.body}</p> 
-                        <p>Votes: {comment.votes}</p> 
-                        <p>{formatDate(comment.created_at)}</p> 
+                    return <li className="comment-card" key={index}>
+                      
+                        <p className="comment-author">{comment.author}</p> 
+                        <p className="comment-date-likes">Likes: {comment.votes}</p> 
+                        <p className="comment-body">{comment.body}</p> 
+                        <p className="comment-date-likes">{formatDate(comment.created_at)}</p>
                         </li>
                     })
                 ) : (<p>No comments...</p>)}   
-            <AddComment review_id={review_id} setComments={setComments} />         
         </div>
     )
 

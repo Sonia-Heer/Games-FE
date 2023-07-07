@@ -40,11 +40,11 @@ const AddComment = ({ review_id, setComments }) => {
   };
 
   return (
-    <div>
-      <h2>Comment on this review:</h2>
+    <div className='addcomment-container'>
+      <h3 className="comment-title">Comments</h3>
       <form className="AddComment" onSubmit={handleSubmit}>
         <div>
-          <input name="author" placeholder="username..." value={author} onChange={handleAuthorChange} required />
+          <input className='textarea' name="author" placeholder="username..." value={author} onChange={handleAuthorChange} required />
         </div>
         <div>
           <textarea
@@ -53,16 +53,18 @@ const AddComment = ({ review_id, setComments }) => {
             value={body}
             onChange={handleBodyChange}
             required
+            className='textarea'
           ></textarea>
         </div>
-        <Button
+        <button
             loadingText='Submitting...'
             colorScheme='cyan'
             variant='solid'
             type="submit" 
-            disabled={isSubmitting}>
+            disabled={isSubmitting}
+            className='comment-button'>
           {isSubmitting ? 'Submitting...' : 'Add Comment'}
-        </Button>
+        </button>
       </form>
     </div>
   );

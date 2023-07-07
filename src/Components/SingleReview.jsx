@@ -28,28 +28,38 @@ const SingleReview = () => {
 }
 
   return (
+    <div>
+      <div className="background" />
     <div className="single-review-container">
       <h3 className="sr-title">{review.title}</h3>
-      <p className="sr-owner">{review.owner}</p>
-        <Image 
+      <div className="author-and-votes-container">
+        <p className="sr-owner">{review.owner}</p>
+        <IncVotes review={review} setReview={setReview} />
+      </div>
+      <div className="image-and-review-container">
+      <Image 
             boxSize='200px' 
             objectFit='cover' 
             src={review.review_img_url} 
             alt={review.title} 
             fallbackSrc='https://via.placeholder.com/150'
+            className="image"
         />
-          {/* <img className="img" src={review.review_img_url} alt={review.title} /> */}
           <main className="single-review-content">
-              
-              <p>{review.category}</p>
+            <div className="info">
+              <p>Category: {review.category}</p>
               <p>Designer: {review.designer}</p>
               <p>Created: {formatDate(review.created_at)}</p>
-              <p>{review.review_body}</p>
-              
-            <IncVotes review={review} setReview={setReview} />
-            <ReviewComments review_id={review_id} />
+            </div>  
+             
+              <p className="body">{review.review_body}</p>
           </main>
+      </div>
+        
+          <ReviewComments review_id={review_id} />
     </div>
+    </div>
+    
   );
 };
 

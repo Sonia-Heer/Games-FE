@@ -1,9 +1,33 @@
+
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.hdqwalls.com/wallpapers/minimal-landscape-4k-ro.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+
 .Reviews{
-    padding-top: 6rem;
-    color: aliceblue;
+    color: #4A2358;
     font-size: large;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
+    position: relative;
+    
+}
+
+.review-box{
+    padding-top: 8rem;
+    color: #4A2358;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    
 }
 
 .review-container {
@@ -12,10 +36,10 @@
     flex-direction: column;
     margin: 2rem 0;
     padding: 1em;
-    border: 3px solid rgb(255, 249, 238);
+    border: 2px solid #90606E;
     border-radius: 10px;
-    color:rgb(36, 36, 36);
-    background-color: rgb(255, 249, 238);
+    color: white;
+    background-color: #946d8c;
 }
   
 .review-container:hover{
@@ -24,7 +48,7 @@
 }
 
 .review-title{
-    color: rgb(36, 36, 36);
+    color: #4A2358;
     font-family: "new-spirit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: large;
     padding: 0.4rem;
@@ -34,7 +58,7 @@
 .img{
     margin: 1em 0 0;
     max-width: 100%;
-    border: 2px solid rgb(255, 249, 238);
+    border: 2px solid #90606E;
     border-radius: 10px;
 }
 
@@ -45,7 +69,7 @@
 .review-text{
     display:flex;
     justify-content: space-between;
-    color: black; 
+    color: #4A2358; 
     padding: 0.4rem;
 }
 
@@ -53,16 +77,6 @@
     text-align: end;
 }
 
-.container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 50vh; 
-    width: 100%
-    background-size: cover;
-    background-position: center;
-  }
-  
   .image {
     max-width: 100%;
     max-height: 100%;
