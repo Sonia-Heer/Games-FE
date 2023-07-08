@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getCategories } from '../apis';
-
+import "../CSS/Categories.css"
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -22,15 +22,18 @@ const Categories = () => {
   }
 
   return (
-    <div>
-      <h2>Categories</h2>
+    <div className='category-container'>
+      <div className="background" />
+      <h2 className='category-title'>Categories</h2>
         {categories.map((category, index) => {
             const { slug, description } = category;
             return (
+              <div className='category'>
                 <button className="category-button" key={index}>
                     <h3 className="category-slug">{slug}</h3>
                     <p className="category-description">{description}</p>
-                </button>    
+                </button>   
+                </div> 
             )
         })}
      </div>

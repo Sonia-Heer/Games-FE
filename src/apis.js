@@ -33,10 +33,10 @@ export function patchReviewVotes(review_id, inc_votes){
     })
 }
 
-
 export function getCategories(){
   return gamesApi.get('/categories')
     .then((response) => {
+      console.log(response)
       return response.data;
     })
 }

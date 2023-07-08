@@ -1,0 +1,48 @@
+.category-container{
+    padding-top: 8rem;
+}
+
+.category{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    
+}
+
+.category-button{
+    border: 2px solid #4a2358;
+    border-radius: 10px;
+    background-color: #FFBE7E;
+    color: #4a2358;
+    padding: .5rem;
+}
+
+.category-title{
+    text-align: center;
+    color: #4A2358;
+    font-size: large;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.hdqwalls.com/wallpapers/minimal-landscape-4k-ro.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.category-slug{
+    padding: .2rem;
+    font-weight: 500;
+}
+
+.category-description{
+   font-size: small;
+   font-weight: 400;
+}

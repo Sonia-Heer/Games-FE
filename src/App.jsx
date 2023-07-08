@@ -27,7 +27,7 @@ function App(){
         <Routes>
           <Route path='/reviews' element={<AllReviews/>}/>
           <Route path='/reviews/:review_id' element={<SingleReview/>}/>
-          <Route path='/categories' element={<Categories />}/>
+          <Route path='/' element={<Categories />}/>
         </Routes>
     </ChakraProvider>
   )
