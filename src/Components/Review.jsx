@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 const Review = ({ review }) => {
 
+    console.log(review)
+    
     const { review_id, title, owner, review_img_url, comment_count, category, votes } = review;
 
     return (

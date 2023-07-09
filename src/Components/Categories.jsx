@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { getCategories } from '../apis';
-import "../CSS/Categories.css"
+import "../CSS/Categories.css";
+import CategoryReviews from './CategoryReviews';
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [isCategoryClicked, setIsCategoryClicked] = useState(false);
 
   useEffect(() => {
     getCategories()
@@ -17,26 +21,46 @@ const Categories = () => {
       });
   }, []);
 
+  const handleCategoryClick = (categorySlug) => {
+    setSelectedCategory(categorySlug);
+    setIsCategoryClicked(true);
+  };
+
+  const handleGoBack = () => {
+    setIsCategoryClicked(false);
+    setSelectedCategory(null);
+  };
+
   if (isLoading) {
-    return <p>Loading Categories...</p>;
+    return <p className="Loading-page">Loading Categories...</p>;
   }
 
   return (
     <div className='category-container'>
       <div className="background" />
-      <h2 className='category-title'>Categories</h2>
-        {categories.map((category, index) => {
-            const { slug, description } = category;
-            return (
-              <div className='category'>
-                <button className="category-button" key={index}>
-                    <h3 className="category-slug">{slug}</h3>
-                    <p className="category-description">{description}</p>
-                </button>   
-                </div> 
-            )
-        })}
-     </div>
+      {!isCategoryClicked && categories.map((category, index) => {
+        const { slug, description } = category;
+        return (
+          <div className='category' key={index}>
+            <button
+              className="category-button"
+              onClick={() => handleCategoryClick(slug)}
+            >
+              <h3 className="category-slug">{slug}</h3>
+              <p className="category-description">{description}</p>
+            </button>
+          </div>
+        );
+      })}
+      {isCategoryClicked && (
+        <div>
+          <button className="back-button" onClick={handleGoBack}>
+            Return
+          </button>
+          <CategoryReviews category={selectedCategory} />
+        </div>
+      )}
+    </div>
   );
 };
 

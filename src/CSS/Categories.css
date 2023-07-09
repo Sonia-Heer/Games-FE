@@ -46,3 +46,22 @@
    font-size: small;
    font-weight: 400;
 }
+
+.Loading-page{
+    text-align: center;
+    color: #4A2358;
+    font-size: large;
+    padding-top: 10rem;
+    font-weight: 700;
+}
+
+
+.back-button{
+    text-align: center;
+    color: #4A2358;
+    font-weight: 700;
+    background-color: #FFBE7E;
+    border: 2px solid #4a2358;
+    border-radius: 10px;
+    margin-left: 2rem;
+}
